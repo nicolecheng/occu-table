@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title> {{ title }} </title>
+    <h2> {{ intro }} </h2>
+  </head>
+
+  <body>
+
+    <table style="width:100%" border="1">
+      <tr>
+	<th>Occupation</th>
+	<th colspan="2">Percentage</th>
+      </tr>
+      {% for key, value in collection.iteritems() %}
+      <tr>
+	<td> {{ key }} </td>
+	<td> {{ value }} </td>
+      </tr>
+      {% endfor %}
+    </table> 
+
+     <br><br>
+     I bet you're wondering which of these occupations
+     <i>you</i> should have.<br>
+     The answer?<br><br>
+     You should work in <b> {{ job }}. </b>
+  </body>
+
+</html>
+
